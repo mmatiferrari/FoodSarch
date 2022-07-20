@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    display: flex;
+    flex-flow: column;
+}
+
+.photoContainer {
+    display: flex;
+    justify-content: end;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    height: 150px;
+    width: 50%;
+    background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+    border-radius: 50px;
+}
+
+.textBanner {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin: auto;
+    color: #f1f1f1;
+    text-align: left;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.photo {
+
+    margin-top: -49px;
+    margin-right: 40px;
+    height: 220px;
+    width: 220px;
+}
+
+.container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.container .cards {
+    background: rgb(255, 255, 255);
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.051);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+
+}
+
+.container .cards:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 17px 20px rgba(0, 0, 0, 0.08);
+}
+
+.Button {
+    border: 0;
+    margin-left: 25px;
+    border-radius: 50%;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+    cursor: pointer;
+}
+
+.Button:hover {
+    background-color: #fcc46a;
+    padding: 2px;
+}
+
+.Button:hover::after {
+    transform: translate(5px, -50%);
+    opacity: 1;
+}
+
+.Button .card {
+    width: 330px;
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.line {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.createLink {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+
+.card {
+    text-decoration: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: #fff;
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #a7a7a7;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.typeFilter {
+    text-decoration: #fff;
+    border: 0;
+    display: inline;
+    padding-top: 20px;
+    border-radius: 50px;
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    background: #fff;
+}
+
+.orderFiler {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.filter {
+    display: inline;
+    justify-items: center;
+    padding: 12px;
+    margin: 13px;
+    line-height: 3;
+    background: #fff;
+    border-radius: 50px;
+}
+
+.ButtonFilter {
+    text-decoration: #fff;
+    margin-top: 5px;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    width: 105px;
+    height: 45px;
+    background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+    margin-bottom: 20px;
+}
+
+.simbol {
+    margin-bottom: -5px;
+}
+
+
+.typeFilter {
+    padding-top: 0px;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: #000;
+    pointer-events: none;
+    transition: .25 all ease;
+}
+
+.select:hover::after {
+    color: #fb9300;
+
+}
+
+.filterOption {
+    margin: 20px;
+}
+
+.paginated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    margin-left: 20%;
+    background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+    width: 60%;
+    height: 150px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+}

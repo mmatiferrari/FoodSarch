@@ -1,0 +1,41 @@
+.paginated ul {
+    display: flex;
+    background: white;
+    padding: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.paginated ul li {
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.paginated ul li.number {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.paginated ul li.prev {
+    padding: 0 20px;
+    border-radius: 5px 25px 25px 5px;
+
+}
+
+.paginated ul li.next {
+    padding: 0 20px;
+    border-radius: 25px 5px 5px 25px;
+}
+
+.paginated ul li.number:hover,
+.paginated ul li.prev:hover,
+.paginated ul li.next:hover {
+    background: rgb(218, 218, 218);
+}

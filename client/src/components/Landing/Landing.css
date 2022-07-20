@@ -1,0 +1,51 @@
+.containerAllLanding {
+        position: relative;
+        display: flex;
+}
+
+.containerLanding {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+}
+
+.button {
+
+        display: inline-block;
+        min-width: 180px;
+        padding: 15px 10px;
+        background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+        border-radius: 50px;
+        font-weight: 600;
+        border-radius: 50px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: none;
+        cursor: pointer;
+        transition: background-color .25s,
+                padding-right .25s;
+}
+
+.button:hover {
+        background-color: #f7b347;
+        padding-right: 35px;
+}
+
+.button::after {
+        content: '\2B62';
+        width: 50px;
+        margin-top: 5px;
+        position: absolute;
+        transform: translate(-17px, -50%);
+        display: inline-block;
+        font-weight: 100;
+        opacity: 0;
+        transition: transform .25s,
+                opacity .25s;
+}
+
+.button:hover::after {
+        transform: translate(5px, -50%);
+        opacity: 1;
+}

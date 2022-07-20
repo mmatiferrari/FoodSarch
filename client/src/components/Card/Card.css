@@ -1,0 +1,38 @@
+.containerCard {
+    display: flex;
+    flex-flow: column row;
+
+}
+
+.image {
+    width: 330px;
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.diets {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.buttonDetails {
+    display: inline-block;
+    min-width: 100px;
+    min-height: 20px;
+    padding: 15px 10px;
+    background-image: linear-gradient(120deg, #f1a501, #fb9300, #e78701);
+    font-weight: 600;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
