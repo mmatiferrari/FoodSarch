@@ -26,10 +26,15 @@ export default function Home (){
     const indexOfLastRecipe = currentPage * recipePerPage
     const indexOfFirstRecipe = indexOfLastRecipe - recipePerPage
     const currentRecipe = allRecipe.slice(indexOfFirstRecipe, indexOfLastRecipe)
+    const numberPages = Math.ceil(allRecipe.length/recipePerPage)
 
+    console.log("este es mi console")
+    console.log(numberPages)
     
     const paginated = (pageNumber) => {
-        setcurrentPage(pageNumber)
+        if(pageNumber>=1 && pageNumber<=numberPages){
+            setcurrentPage(pageNumber)
+        }
     }
 
     useEffect(()=>{
