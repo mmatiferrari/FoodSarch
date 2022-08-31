@@ -24,7 +24,7 @@ export default function Detail(props){
                         <h3 className="summaryDetails">summary: {myRecipe[0].summary}</h3>
                         <h3 className="hsDetails">healthScore: {myRecipe[0].healthScore}</h3>
                         <h3 className="">steps: {myRecipe[0].steps}</h3>
-                        <h3 className="dietsDetail">type diets: {myRecipe[0].diets ? myRecipe[0].diets.map(e => e + (" | ")) : myRecipe[0].TypeDiets.map(e => e.name + (" | "))}</h3>
+                        <h3 className="dietsDetail">type diets: {myRecipe[0].diets ? myRecipe[0].diets.map(e => ("| ") + e + (" |")) : myRecipe[0].TypeDiets.map(e => e.name + (" | "))}</h3>
                         <Link to= "/home">
                             <button className="buttonDetailsBack" type="submit">volver</button>
                         </Link>
