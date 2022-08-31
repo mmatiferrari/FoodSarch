@@ -27,7 +27,7 @@ function validate(input){
     return errors;
 }
 
-export default function RecipeCreate(){
+export default function RecipeCreate({state, changeModal}){
     const dispatch = useDispatch()
     const history = useHistory()
     const diets = useSelector((state) => state.diets)
@@ -91,8 +91,10 @@ export default function RecipeCreate(){
         }, []);
 
         return (
-            <div>
-                <Link to= "/home"><button className="back">Back</button></Link>
+            <>
+            {state &&
+            <div className="all">
+                <button className="back" onClick={()=>changeModal(false)}>Back</button>
                 <form className="form" onSubmit= {(e)=> handleSubmit(e)}>
                     <h1 className="formTitle">Create your recipe</h1>
                     <div className="formContainer">
@@ -183,7 +185,9 @@ export default function RecipeCreate(){
                     <button type="submit" className="formSubmit">crear receta</button>
                 </form>
             </div>
-        )
+             }
+        </>
+    )
 
 
 

@@ -8,11 +8,8 @@ export default function landingPage(){
             <div className="containerLanding">
                 <img src="../img/food.png" width="800px" height="500px"/>
                 <Link to= "/home">
-                    <button class="button">WELCOME</button>
+                    <button className="button">WELCOME</button>
                 </Link>
-            </div>
-            <div  className="photoFood">
-                <img src="../img/orange.png"/>
             </div>
         </div>
     )

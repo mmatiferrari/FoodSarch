@@ -18,7 +18,6 @@ function rootReducer(state = initialState, action){
                 
                 let dietRecipes = [...state.recipeAll];
                 let diet = action.payload;
-                console.log("este es mi console")
                 let result= dietRecipes.filter((e) => e.diets ? e.diets.includes(diet) : e.TypeDiets[0].name.includes(diet))
           
                 return {

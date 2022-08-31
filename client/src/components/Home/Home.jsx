@@ -13,6 +13,7 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { MdOutlineFoodBank } from "react-icons/md";
 import { TbSortAscendingLetters } from "react-icons/tb";
 import { FaHeartbeat } from "react-icons/fa";
+import RecipeCreate from "../Created/RecipeCreate";
 
 
 export default function Home (){
@@ -20,6 +21,7 @@ export default function Home (){
     const dispatch = useDispatch()
     const allRecipe = useSelector((state)=> state.recipe)
     const diets = useSelector((state) => state.diets)
+    const [modal, setModal] = useState(false)
     const [order, setOrder] = useState("")
     const [currentPage, setcurrentPage] = useState(1)
     const [recipePerPage, setRecipePerPage] = useState(9)
@@ -28,8 +30,6 @@ export default function Home (){
     const currentRecipe = allRecipe.slice(indexOfFirstRecipe, indexOfLastRecipe)
     const numberPages = Math.ceil(allRecipe.length/recipePerPage)
 
-    console.log("este es mi console")
-    console.log(numberPages)
     
     const paginated = (pageNumber) => {
         if(pageNumber>=1 && pageNumber<=numberPages){
@@ -82,11 +82,13 @@ export default function Home (){
                             <SearchBar/>
                     </div>
                     <div className="createLink">
-                    <Link to= "/create">
-                        <button className="Button" type="submit"><IoIosAddCircle size="1.8em" color="white"/></button>
-                    </Link>
+                    <button className="Button" onClick={()=>setModal(!modal)} type="submit"><IoIosAddCircle size="1.8em" color="white"/></button>
                     </div>
                 </div>
+                    <RecipeCreate 
+                        state= {modal}
+                        changeModal= {setModal}    
+                    />
                 <div className="photoContainer">
                      <h2 className="textBanner">Find the perfect recipe for you.</h2>
                      <img className="photo" src="../img/cocina.png"/>
@@ -135,11 +137,10 @@ export default function Home (){
 
                 <div className="container">
                     {currentRecipe?.map((e=>{
-                        console.log(e.healthScore)
                         return(
                                 <Link className="cards" to={"/recipe/"+ e.id}>
                                     <div>
-                                        <Card name={e.name} image={e.image} diets={e.diets} />
+                                        <Card name={e.name} image={e.image} diets={e.diets} TypeDiets= {e.TypeDiets} />
                                     </div>
                                 </Link>
                         )
